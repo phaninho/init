@@ -1,0 +1,2 @@
+traceroute -m 10 slash16.org
+#-m 10 affiche les 10 premiers
