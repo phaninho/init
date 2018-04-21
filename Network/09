@@ -1,6 +1,6 @@
 soit la comamnde
 ping 42.fr
-PING 42.fr (163.172.250.13): 56 data bytes
+PING 42.fr (10.52.1.11): 56 data bytes
 
-soit 
-dig +short 42.fr
+soit
+nslookup 42.fr | grep Address | sed -n "2, 4p" | awk '/Address:/{print $2}'
