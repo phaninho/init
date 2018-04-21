@@ -1,1 +1,6 @@
+soit la comamnde
+ping 42.fr
 PING 42.fr (163.172.250.13): 56 data bytes
+
+soit 
+dig +short 42.fr
