@@ -1,2 +1,1 @@
-nslookup slash16.org | grep Server | awk '{print $2}'
-dig slash16.org | grep SERVER | awk '/SERVER/{print $3}' | cut -d \# -f1
+nslookup slash16.org | grep 'Address' | sed 1d | cut -d ' ' -f2
