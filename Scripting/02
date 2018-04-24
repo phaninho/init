@@ -1,2 +1,2 @@
 apt-get update -y && apt-get upgrade -y > /var/log/update_script.log
-crontab -e '0 4 * * 0'
+echo 'bash 0 4 * * 0 ~/init/Scripting/02'
