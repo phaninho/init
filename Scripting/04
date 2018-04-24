@@ -1,0 +1,13 @@
+echo '0 0 * * * bash ~/init/Scripting/04'
+if [ -s crontab_diff.txt ]
+then
+        if [ ! -z "$(diff "crontab_diff.txt" "/etc/crontab")" ]
+		then
+			echo 'diff detected, mail to root'
+			mail -s "diff in crontab" root
+			cat /etc/crontab > crontab_diff.txt
+		fi
+else
+        touch crontab_diff.txt
+		cat /etc/crontab > crontab_diff.txt
+fi
