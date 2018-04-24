@@ -9,5 +9,5 @@ then
 		fi
 else
         touch crontab_diff.txt
-		cat etc/crontab > crontab_diff.txt
+		cat /etc/crontab > crontab_diff.txt
 fi
